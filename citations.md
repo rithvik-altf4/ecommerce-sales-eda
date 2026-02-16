@@ -12,7 +12,7 @@
 
 \## Additional join dataset
 
-\- category\_Details.csv (synthetic dataset generated for assignment use) Created using ChatGPT
+\- category\_Details.csv (synthetic dataset generated for assignment use) Created using ChatGPT/ Heres the link https://chatgpt.com/share/6992b08f-cdf4-8003-acca-deeb0f67f8a6
 
 
 
@@ -25,6 +25,4 @@
 \- Jupyter Notebook
 
 \- Git/GitHub
-
-
 
