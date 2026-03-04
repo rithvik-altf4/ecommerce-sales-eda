@@ -1,49 +1,67 @@
-# E-commerce Sales EDA
+# E-commerce Sales Analysis Project
 
-## Data source
-Kaggle dataset:  
-https://www.kaggle.com/datasets/zahranusratt/e-commerce-orders-and-sales-performance-dataset
+## Project Overview
+This project explores an e-commerce sales dataset to understand sales patterns, profit trends, and category performance. I started with exploratory data analysis in Jupyter Notebook, then improved the project structure, documentation, and Git workflow through branch-based development.
 
-## What this project is
-I explored an e-commerce sales dataset to understand what drives sales and profit.  
-I looked at sales and profit by category and region, and checked how sales changes over time.
+## Main Goal
+The goal of this project was to analyze e-commerce sales data and learn how to manage a data project properly using Git and GitHub. I wanted to understand what the dataset could show about sales, profit, categories, and regions, while also making the project more organized and easier to follow.
 
-## What I found (quick summary)
-- Sales are not all the same size. Most orders are smaller, but a few are much bigger.
-- Some categories bring in more total sales than others.
-- Some regions generate more profit than others.
-- Sales and profit usually move together, but not perfectly.
-- Monthly sales changes over time, so some months look stronger than others.
+## Dataset
+Original dataset source:
+- E-commerce Orders and Sales Performance Dataset (Kaggle)
+- https://www.kaggle.com/datasets/zahranusratt/e-commerce-orders-and-sales-performance-dataset
 
-## Project structure
+Additional dataset used later in the project:
+- `Category_Details.csv`
+- A synthetic lookup dataset created to join on `Category`
 
-- `scripts/` → notebooks for EDA and join work
-- `data/raw/` → raw input files (ignored in GitHub via `.gitignore`)
-- `data/clean/` → cleaned/joined output datasets
-- `docs/` → exported HTML/Markdown files and chart images
-- `results/` → additional output artifacts
-- `citations.md` → dataset and source references
+## What I Did
 
-## Files currently used
+### Part 1: Exploratory Data Analysis
+I explored the original e-commerce dataset by:
+- checking the structure and columns
+- reviewing summary statistics
+- analyzing sales and profit
+- comparing category and region performance
+- creating visualizations to better understand patterns
 
-- `scripts/01_eda_ecommerce.ipynb` → main EDA notebook
-- `docs/DataAnalyis_eCommerce.html` → exported HTML version
-- `docs/DataAnalyis_eCommerce.md` → exported Markdown version
-- `docs/output_*.png` → images used by Markdown rendering
+### Part 2: Project Structure and Join Work
+In the next stage of the project, I improved the repository structure by organizing files into folders such as:
+- `scripts/`
+- `data/raw/`
+- `data/clean/`
+- `docs/`
+- `results/`
 
-## Part 2 join dataset
+I also created a second notebook where I joined the original sales data with a category lookup dataset using a **left join** on `Category`.
 
-For the join task, I use:
-- `data/raw/Category_Details.csv` (lookup table)
+## Key Findings
+- Sales vary a lot across orders, with many smaller orders and some much larger ones.
+- Categories contribute differently to total sales and profit.
+- Regions also differ in profitability.
+- The join dataset helped enrich the project by adding category-level information such as margin, return rate, and priority.
+- The join also showed how unmatched keys can create `NaN` values, which is an important part of real data work.
 
-Join key:
-- `Category`
+## Tools Used
+- Python
+- pandas
+- matplotlib
+- Jupyter Notebook
+- Git
+- GitHub
 
-Expected output:
-- `data/clean/ecommerce_sales_joined.csv`
+## Project Structure
+- `scripts/` → notebooks for analysis and join work
+- `data/raw/` → raw input data files
+- `data/clean/` → processed output files
+- `docs/` → HTML/Markdown exports and screenshots
+- `results/` → additional outputs
+- `citations.md` → source references and dataset notes
+
+## What I Learned
+This project helped me learn not just data analysis, but also how to manage a project more professionally. I learned how useful Git branches are, why `.gitignore` matters, how relative paths make a project portable, and how documentation improves the quality of a project. I also learned that joins are not just about combining data, but also about understanding mismatches and missing values.
 
 ## Notes
-
-- Raw data files are intentionally not tracked on GitHub.
-- `.ipynb_checkpoints/` and `data/raw/` are ignored using `.gitignore`.
-- Relative paths are used in notebooks (for example `../data/raw/...`) so the project is portable for other users.
+- The toddler project work has now been merged into `main`.
+- The final reflection for the assignment was submitted separately to Learning Hub.
+- AI was used as a support tool during planning, structuring, explanations, and debugging.
